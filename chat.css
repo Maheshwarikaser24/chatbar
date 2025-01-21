@@ -1,0 +1,136 @@
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+h1 {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3.5rem;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 1px solid #000;
+    border-left: 1px solid #000;
+    position: relative;
+    width: 50rem;
+    height: 30rem;
+}
+
+.box {
+    position: relative;
+    width: 5rem;
+    height: 100%;
+}
+
+.box:nth-of-type(1) .bar {
+    height: 50%;
+    animation: animateone 1s ease;
+}
+
+.box:nth-of-type(2) .bar {
+    height: 40%;
+    animation: animatetwo 1s ease;
+}
+
+.box:nth-of-type(3) .bar {
+    height: 25%;
+    animation: animatethree 1s ease;
+}
+
+.box:nth-of-type(4) .bar {
+    height: 15%;
+    animation: animatefour 1s ease;
+}
+
+.box:nth-of-type(5) .bar {
+    height: 30%;
+    animation: animatefive 1s ease;
+}
+
+.bar {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    background-image: linear-gradient(to bottom, #00d4ff, #090979);
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+.bar .skill {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 200%) skew(-10deg) rotate(-15deg);
+    font-size: 1.5rem;
+}
+
+.bar .number {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -120%);
+    font-size: 2rem;
+}
+
+/* Keyframes for animations */
+@keyframes animateone {
+    0% {
+        height: 0%;
+    }
+    100% {
+        height: 50%;
+    }
+}
+
+@keyframes animatetwo {
+    0% {
+        height: 0%;
+    }
+    100% {
+        height: 40%;
+    }
+}
+
+@keyframes animatethree {
+    0% {
+        height: 0%;
+    }
+    100% {
+        height: 25%;
+    }
+}
+
+@keyframes animatefour {
+    0% {
+        height: 0%;
+    }
+    100% {
+        height: 15%;
+    }
+}
+
+@keyframes animatefive {
+    0% {
+        height: 0%;
+    }
+    100% {
+        height: 30%;
+    }
+}
